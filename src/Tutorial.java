@@ -9,12 +9,10 @@ public class Tutorial {
 	 
 	 public static void inputTest(){
 		 String message = input.nextLine();
-		 if (message.equals("hi")) {
-			 System.out.println("Hello!");
-		 }
+		 System.out.println(Hello(message));
 	 }
 	 
-	 public static String Hello(String[] message){
+	 public static String Hello(String message){
 		 if (message.equals("Hi")){
 			 return "Hello";
 		 } else {
