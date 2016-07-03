@@ -13,4 +13,12 @@ public class Tutorial {
 			 System.out.println("Hello!");
 		 }
 	 }
+	 
+	 public static String Hello(String[] message){
+		 if (message.equals("Hi")){
+			 return "Hello";
+		 } else {
+			 return "Goodbye";
+		 }
+	 }
 }
