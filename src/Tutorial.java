@@ -1,22 +1,16 @@
-// This is a tutorial
+import java.util.Scanner;
 public class Tutorial {
 	
-	public static void main(String[] args){
-//		this is our main void
-		int number = 24;
-			
-			if (number == 24) {
-				
-//				Write
-				System.out.println("Number is 24");
-				
-			} 
-				else {
-				
-//					Write
-					System.out.println("Number is not 24");
-				
-				}
-	}
-	
+	static Scanner input = new Scanner(System.in);
+
+	 public static void main(String[] args) {
+		 inputTest();
+	 }
+	 
+	 public static void inputTest(){
+		 String message = input.nextLine();
+		 if (message.equals("hi")) {
+			 System.out.println("Hello!");
+		 }
+	 }
 }
