@@ -7,12 +7,26 @@ public class ArrayListIntro {
 	static ArrayList<Integer> array = new ArrayList<Integer>();
 	
 	public static void main(String[] args) {
+		
+		// Retrieve numbers from user
 		System.out.println("Please enter an array of numbers, type 0 when finished");
 		int in = reader.nextInt();
+		
+		// Keep asking for numbers until '0' is inputted
 		while (in != 0) {
 			array.add(in);
 			in = reader.nextInt();
 		}
+		
+		// Print out inputted numbers
+		PrintArray();
+		
+		// Retrieve a number to delete from array
+		System.out.println("What number whould you like to delete?");
+		int del = reader.nextInt();
+	}
+	
+	public static void PrintArray() {
 		System.out.println("-------------------------------------");
 		for (int i : array) {
 			System.out.println(i);
