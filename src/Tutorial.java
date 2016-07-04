@@ -4,7 +4,7 @@ public class Tutorial {
 	static Scanner input = new Scanner(System.in);
 
 	 public static void main(String[] args) {
-		 inputTest();
+		 countNumber();
 	 }
 	 
 	 public static void inputTest(){
@@ -13,10 +13,18 @@ public class Tutorial {
 	 }
 	 
 	 public static String Hello(String message){
-		 if (message.equals("Hi")){
+		 if (message.equals("Hi")) {
 			 return "Hello";
 		 } else {
 			 return "Goodbye";
+		 }
+	 }
+	 
+	 public static void countNumber(){
+		 int i = 0;
+		 while (i <= 100) {
+			 System.out.println(i);
+			 i++;
 		 }
 	 }
 }
