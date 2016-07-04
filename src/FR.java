@@ -8,7 +8,7 @@ public class FR {
 		// Get file from computer - ln 11 will throw FileNotFoundException if it can't find the file 
 		// It will also require so preemptive Exception handling JUST IN CASE it can't find the file
 		// See the 'throws Exception' in ln 8 for the preemptive Exception handling
-		FileReader file = new FileReader("/Users/charleslee/Desktop/Eclipse/Tutorial/text.txt");
+		FileReader file = new FileReader("/Users/charleslee/Desktop/Eclipse/Tutorial/newFile.txt");
 		BufferedReader reader = new BufferedReader(file);
 		
 		// Create variables to hold data from text file
