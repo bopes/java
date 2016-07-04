@@ -24,6 +24,17 @@ public class ArrayListIntro {
 		// Retrieve a number to delete from array
 		System.out.println("What number whould you like to delete?");
 		int del = reader.nextInt();
+		
+		// Remove element from the array
+		for (int i = 0; i < array.size(); i++) {
+			if (array.get(i) == del) {
+				array.remove(i);
+				break;
+			}
+		}
+		
+		// Print array to verify deleted number
+		PrintArray();
 	}
 	
 	public static void PrintArray() {
