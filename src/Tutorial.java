@@ -5,6 +5,7 @@ public class Tutorial {
 
 	 public static void main(String[] args) {
 		 countNumber();
+		 compareUnequalString();
 	 }
 	 
 	 public static void inputTest(){
@@ -25,6 +26,17 @@ public class Tutorial {
 		 while (i <= 100) {
 			 System.out.println(i);
 			 i++;
+		 }
+	 }
+	 
+	 public static void compareUnequalString(){
+		 String x = "Brandon";
+		 String y = "Ryan";
+		 if (!x.equals(y)) {
+			 System.out.println("X does not equal Y");
+			 if (2 != 5) {
+				 System.out.println("2 does not equal 5");
+			 }
 		 }
 	 }
 }
