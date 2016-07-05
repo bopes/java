@@ -2,7 +2,6 @@
 public class objectIntroTest {
 	
 	public static void main(String[] args){
-		String x = "Hello";
 		
 		// Create new water bottle
 		objectIntro waterBottle = new objectIntro();

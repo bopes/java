@@ -10,6 +10,7 @@ public class TryCatchFinally {
 		// Try block including variables defined otuside of scope
 		try {
 			int answer = y / x;
+			System.out.println(answer);
 			
 			// a blank return will exit from whatever block you're in
 			// in a TCF chain, any code in 'finally' will run before you return out of 'try'
