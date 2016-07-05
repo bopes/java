@@ -5,14 +5,18 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 public class KeyListenerIntro extends Applet implements KeyListener {
 
 	private Rectangle rect;
 	
+	private ArrayList<Integer> keysPressed;
+	
 	public void init() {
 		this.addKeyListener(this);
 		rect = new Rectangle(0, 0, 50, 50);
+		keysPressed = new ArrayList<Integer>();
 	}
 	
 	public void paint(Graphics g) {
@@ -28,21 +32,35 @@ public class KeyListenerIntro extends Applet implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-			rect.setLocation(rect.x + 2, rect.y);
-		} else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-			rect.setLocation(rect.x - 2, rect.y);
-		} else if (e.getKeyCode() == KeyEvent.VK_UP) {
-			rect.setLocation(rect.x, rect.y - 2);
-		} else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			rect.setLocation(rect.x, rect.y + 2);
-		}
-		repaint();
+		if (!keysPressed.contains(e)) 
+			keysPressed.add(new Integer(e.getKeyCode()));
+		moveRect();
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+		keysPressed.remove(new Integer(e.getKeyCode()));
+	}
+	
+	public void moveRect() {
+		int x = rect.x;
+		int y = rect.y;
 		
+		if (keysPressed.contains(KeyEvent.VK_RIGHT)) {
+			x += 2;
+		}
+		if (keysPressed.contains(KeyEvent.VK_LEFT)) {
+			x -= 2;
+		}
+		if (keysPressed.contains(KeyEvent.VK_UP)) {
+			y -= 2;
+		}
+		if (keysPressed.contains(KeyEvent.VK_DOWN)) {
+			y += 2;
+		}
+		
+		rect.setLocation(x, y);
+		repaint();
 	}
 	
 	
