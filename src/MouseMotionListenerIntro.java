@@ -45,7 +45,7 @@ implements MouseMotionListener, MouseListener {
 	public void mouseAction(MouseEvent e, int size){
 		int mouseX = e.getX();
 		int mouseY = e.getY();
-		if (mouseButton == MouseEvent.BUTTON3)
+		if (mouseButton == MouseEvent.BUTTON3 || mouseButton == MouseEvent.BUTTON3_MASK)
 			drawSquare(mouseX, mouseY, size, size);
 		else
 			drawCircle(mouseX, mouseY, size, size);
@@ -53,7 +53,8 @@ implements MouseMotionListener, MouseListener {
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
-		mouseAction(e, 10);
+		mouseButton = e.getModifiers();
+		mouseAction(e, 20);
 	}
 
 	@Override
@@ -63,7 +64,7 @@ implements MouseMotionListener, MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		mouseButton = e.getButton();
-		mouseAction(e, 20);
+		mouseAction(e, 30);
 	}
 
 	@Override
