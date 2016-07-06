@@ -44,7 +44,9 @@ public class SwitchStatement {
 		
 		switch (dayString) {
 		
-		case "Sunday": 
+		// You can have multiple cases point to the same code (in this case, weekend days)
+		case "Sunday":
+		case "Saturday":
 			day = 0;
 			break;
 		case "Monday": 
@@ -61,9 +63,6 @@ public class SwitchStatement {
 			break;
 		case "Friday": 
 			day = 5;
-			break;
-		case "Saturday": 
-			day = 6;
 			break;
 		// Can set a default case as well
 		default: 
