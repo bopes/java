@@ -8,7 +8,7 @@ public class SwitchStatement {
 		
 		switch (day) {
 			case 0: dayString = "Sunday";
-					break;
+					break; // Without this break, the switch will execute the first successful case and then all cases after it
 			case 1: dayString = "Monday";
 					break;
 			case 2: dayString = "Tuesday";
